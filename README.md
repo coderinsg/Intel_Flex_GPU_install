@@ -3,6 +3,7 @@ Scripts for installing GPU drivers for Intel Flex GPU on Ubuntu
 
 # About
 Source: https://dgpu-docs.intel.com/driver/installation.html#ubuntu-install-steps
+
 Tested on:
 ```
 $ more /etc/os-release
@@ -26,5 +27,7 @@ UBUNTU_CODENAME=jammy
 3. Execute the script, `02_ubuntu_before_reboot`. After completion, it will reboot.
 4. After reboot, continue the setup by executing `03_ubunti_after_reboot`.
 5. When it is completed, run `xpu-smi discovery` to check if the GPUs were discovered.
-   you should see cards such as `Intel Flex140 GPU`.
+
+    you should see cards such as `Intel Flex140 GPU`.
+
    `xpu-smi discovery -d0` can be used for specific card. 
