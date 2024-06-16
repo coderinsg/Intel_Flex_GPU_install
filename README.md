@@ -28,6 +28,25 @@ UBUNTU_CODENAME=jammy
 4. After reboot, continue the setup by executing `03_ubunti_after_reboot`.
 5. When it is completed, run `xpu-smi discovery` to check if the GPUs were discovered.
 
-    you should see cards such as `Intel Flex140 GPU`.
+    you should see cards such as below:
+```
++-----------+--------------------------------------------------------------------------------------+
+| Device ID | Device Information                                                                   |
++-----------+--------------------------------------------------------------------------------------+
+| 0         | Device Name: Intel(R) Data Center GPU Flex 140                                       |
+|           | Vendor Name: Intel(R) Corporation                                                    |
+|           | SOC UUID: 00000000-0000-0000-abcd-345634563456                                       |
+|           | PCI BDF Address: 0000:90:00.0                                                        |
+|           | DRM Device: /dev/dri/card1                                                           |
+|           | Function Type: physical                                                              |
++-----------+--------------------------------------------------------------------------------------+
+| 1         | Device Name: Intel(R) Data Center GPU Flex 140                                       |
+|           | Vendor Name: Intel(R) Corporation                                                    |
+|           | SOC UUID: 00000000-0000-0000-efgh-123412341234                                       |
+|           | PCI BDF Address: 0000:93:00.0                                                        |
+|           | DRM Device: /dev/dri/card2                                                           |
+|           | Function Type: physical                                                              |
++-----------+--------------------------------------------------------------------------------------+
+```   
 
    `xpu-smi discovery -d0` can be used for specific card. 
